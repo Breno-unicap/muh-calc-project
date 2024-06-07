@@ -1,0 +1,15 @@
+@layout.app({ title: "About" })
+  @slot('meta')
+    <meta name="description" content="A Ragnarok Online EV Calculator">
+  @endslot
+
+    <section class="about">
+        <h1>ABOUT</h1>
+        <br>
+        <p>The MuhCalc tool is a calculator for the minimum expected cost of item upgrades on a Ragnarok Online game server.</p>
+        <p>There are various types of equipment in the game, each following a distinct upgrade process. In many cases, players need to make a series of decisions to achieve the final result: should they use the cheaper material with a lower success rate, or the more expensive one that guarantees success? What would be the cost of upgrades using only one of these types? Would mixing materials at each step be cheaper? What if they just bought the item ready-made from another player?</p>
+        <p>MuhCalc provides concrete answers to these frequent questions from players on the Discord server, which are often answered based on anecdotal evidence from other players' (often unique) experiences.</p>
+        <p>The calculator aims to determine the lowest expected average cost among all possible permutations of a given upgrade process. This is achieved through calculations using Markov Chains and Monte Carlo Simulations, which are not computationally trivial and therefore require preprocessing to avoid long wait times and redundant use of machine resources.</p>
+    </section>
+
+@end

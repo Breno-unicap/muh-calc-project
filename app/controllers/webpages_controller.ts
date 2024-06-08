@@ -5,7 +5,6 @@ export default class WebpagesController {
 
     async lvl2Calculate({ request, response }: HttpContext) {
         const { materialBase, materialHd, bsb, hammerAttemptCost } = request.body();
-        console.log('oi')
         const { data } = await axios.post('/api/calculate-lvl-2/', {
             materialBase, materialHd, bsb, hammerAttemptCost
         }, {

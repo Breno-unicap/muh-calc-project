@@ -16,9 +16,10 @@ const WebpagesController = () => import ('#controllers/webpages_controller')
 // frontend routes
 router.on('/').render('pages/about/about')
 router.on('/tutorial').render('pages/tutorial/tutorial')
-router.on('/lvl1').render('pages/lvl1/lvl1')
 
-//router.on('/shadow-gear').render('pages/shadow-gear/shadow-gear')
+router.post('/lvl1-calculate', [WebpagesController, 'lvl1Calculate'])
+router.get('/lvl1', [WebpagesController, 'lvl1Render'])
+
 router.post('/shadow-gear-calculate', [WebpagesController, 'shadowGearCalculate'])
 router.get('/shadow-gear', [WebpagesController, 'shadowGearRender'])
 

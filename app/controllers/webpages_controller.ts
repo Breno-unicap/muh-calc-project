@@ -3,14 +3,34 @@ import { inject } from '@adonisjs/core'
 import { CalculatorService } from '#services/calculator';
 
 export default class WebpagesController {
+
+    @inject()
+    async lvl1Calculate({ request, response }: HttpContext, calculatorService: CalculatorService) {
+        const { targetStep, materialBase } = request.body();
+        const data = await calculatorService.calculateLvl1({ targetStep, materialBase })
+        return response.redirect()
+            .withQs({
+                output: data.result,
+                guide: data.path
+            })
+            .toRoute('/lvl1')
+    }
+    
+    lvl1Render({ request, view }: HttpContext) {
+        return view.render('pages/lvl1/lvl1', {
+            output: request.qs().output || null,
+            guide: request.qs().guide || null
+        })
+    }
+
     @inject()
     async lvl2Calculate({ request, response }: HttpContext, calculatorService: CalculatorService) {
         const { materialBase, materialHd, bsb, hammerAttemptCost } = request.body();
         const data = await calculatorService.calculateLvl2({ materialBase, materialHd, bsb, hammerAttemptCost })
         return response.redirect()
-            .withQs({
-                output: data.result,
-                guide: data.path
+        .withQs({
+            output: data.result,
+            guide: data.path
             })
             .toRoute('/lvl2')
     }
@@ -58,5 +78,7 @@ export default class WebpagesController {
             output: request.qs().output || null,
             guide: request.qs().guide || null
         })
-    }
+        }
+        
+
 }

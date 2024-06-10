@@ -2,9 +2,10 @@ import * as c from "#types/calculator"
 
 export class CalculatorService {
 
-    async calculateLvl1({ num1, num2 }: c.calculatorInputType): Promise<c.calculatorResult>{
+    async calculateLvl1({ targetStep, materialBase }: c.lvl1InputType): Promise<c.calculatorResult>{
         let attempts: number;
-        switch(num1) { 
+        const expr = Number(targetStep)
+        switch(expr) { 
             case 1: { 
                 attempts = 4;
                 break;
@@ -30,13 +31,12 @@ export class CalculatorService {
                 break;
             }
         }
-        const result = num2 * attempts;
+        const result = materialBase * attempts;
         const path = 'do this and then that. then do another thing'
 
         return { 
             result,
             path
-            
         };
     }
     

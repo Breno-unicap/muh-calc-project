@@ -16,9 +16,14 @@ const WebpagesController = () => import ('#controllers/webpages_controller')
 // frontend routes
 router.on('/').render('pages/about/about')
 router.on('/tutorial').render('pages/tutorial/tutorial')
-router.on('/shadow-gear').render('pages/shadow-gear/shadow-gear')
 router.on('/lvl1').render('pages/lvl1/lvl1')
-router.on('/enchant-upgrade').render('pages/enchant-upgrade/enchant-upgrade')
+
+//router.on('/shadow-gear').render('pages/shadow-gear/shadow-gear')
+router.post('/shadow-gear-calculate', [WebpagesController, 'shadowGearCalculate'])
+router.get('/shadow-gear', [WebpagesController, 'shadowGearRender'])
+
+router.post('/enchant-upgrade-calculate', [WebpagesController, 'enchantUpgradeCalculate'])
+router.get('/enchant-upgrade', [WebpagesController, 'enchantUpgradeRender'])
 router.post('/lvl2-calculate', [WebpagesController, 'lvl2Calculate'])
 router.get('/lvl2', [WebpagesController, 'lvl2Render'])
 

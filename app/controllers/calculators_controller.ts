@@ -36,8 +36,8 @@ export default class CalculatorsController {
     @inject()
     async calculateUpgradeEnchantment({ request, response }: HttpContext, calculatorService: CalculatorService) {
         try {
-            const { num1, num2 } = request.body();
-            return response.header('Content-type', 'application/json').status(200).send(await calculatorService.calculateUpgradeEnchantment({num1, num2}))
+            const { targetStep } = request.body();
+            return response.header('Content-type', 'application/json').status(200).send(await calculatorService.calculateUpgradeEnchantment({targetStep}))
         } catch (error) {
             return response.header('Content-type', 'application/json').status(400).send({error})
         }

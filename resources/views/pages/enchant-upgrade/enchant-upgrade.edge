@@ -5,21 +5,26 @@
 
 <section class="calculator">
   <h1>Enchant Upgrades Calculator</h1>
-  <form>
-      <label for="material-base">Material Base:</label>
-      <input type="number" id="material-base" name="material-base" required>
-      <br>
-      <br>
-      <label for="final-step">Final Step:</label>
-      <input type="number" id="final-step" name="final-step" required>
+  <form method="POST" action="/enchant-upgrade-calculate/?_method=POST">
+      {{ csrfField() }}
+
+      <label for="target-step">Target Step:</label>
+      <select type="number" id="target-step" name="targetStep" required>
+        <option value="2">lv2</option>
+        <option value="3">lv3</option>
+        <option value="4">lv4</option>
+        <option value="5">lv5</option>
+      </select>
       <br>
       <br>
       <button type="submit">Calculate</button>
   </form>
   <div class="output">
-      <h2>Output:</h2>
-      <p>Here goes the output of the calculation...</p>
-  </div>
+    <h2>Output:</h2>
+</div>
+<div class="guide">
+  <p> {{ guide ? `${guide}` :"" }} </p>
+</div>
 </section>
 
 @end

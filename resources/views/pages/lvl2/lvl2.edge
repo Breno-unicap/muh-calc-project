@@ -4,25 +4,25 @@
   @endslot
 
   <section class="calculator">
-    <h1>LV2 Calculator</h1>
+    <h1>LV2 Equipment Calculator</h1>
     <form method="POST" action="/lvl2-calculate/?_method=POST">
         {{ csrfField() }}
-        <label for="material-base">Material Base:</label>
-        <input type="number" id="material-base" name="materialBase" required>
+        <label for="material-base">Base Material Cost(in millions):</label>
+        <input type="number" id="material-base" name="materialBase" step="any" min=0 required>
         <br>
         <br>
-        <label for="material-hd">Material HD:</label>
-        <input type="number" id="material-hd" name="materialHd" required>
+        <label for="material-hd">Special Material Cost(in millions):</label>
+        <input type="number" id="material-hd" name="materialHd" step="any" min=0 required>
         <br>
         <br>
-        <label for="bsb">BSB:</label>
-        <input type="number" id="bsb" name="bsb" required>
+        <label for="bsb">BSB cost(in millions):</label>
+        <input type="number" id="bsb" name="bsb" step="any" min=0 required>
         <br>
         <br>
-        <label for="hammer-attempt-cost">Hammer + Attempt Cost:</label>
-        <input type="number" id="hammer-attempt-cost" name="hammerAttemptCost" required>
+        <!--<label for="hammer-attempt-cost">Hammer + Attempt Cost(in millions):</label>
+        <input type="number" id="hammer-attempt-cost" name="hammerAttemptCost" step="any" min=0 required>
         <br>
-        <br>
+        <br> -->
         <button type="submit">Calculate</button>
     </form>
     <div class="output">

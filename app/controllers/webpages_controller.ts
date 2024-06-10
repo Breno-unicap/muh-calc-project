@@ -25,8 +25,8 @@ export default class WebpagesController {
 
     @inject()
     async lvl2Calculate({ request, response }: HttpContext, calculatorService: CalculatorService) {
-        const { materialBase, materialHd, bsb, hammerAttemptCost } = request.body();
-        const data = await calculatorService.calculateLvl2({ materialBase, materialHd, bsb, hammerAttemptCost })
+        const { materialBase, materialHd, bsb } = request.body();
+        const data = await calculatorService.calculateLvl2({ materialBase, materialHd, bsb })
         return response.redirect()
         .withQs({
             output: data.result,

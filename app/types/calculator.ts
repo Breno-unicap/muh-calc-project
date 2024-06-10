@@ -1,7 +1,3 @@
-export interface calculatorInputType {
-    num1: number;
-    num2: number;
-}
 
 export interface lvl1InputType {
     targetStep: number;
@@ -12,7 +8,6 @@ export interface lvl2InputType {
     materialBase: number;
     materialHd: number;
     bsb: number;
-    hammerAttemptCost: number;
 }
 
 export interface enchantmentsType {

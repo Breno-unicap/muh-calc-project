@@ -32,7 +32,7 @@ export class CalculatorService {
             }
         }
         const result = materialBase * attempts;
-        const path = 'do this and then that. then do another thing'
+        const path = 'after reaching +10 with a certificate item, attempt special upgrades until upgrade target +1'+expr+' is reached'
 
         return { 
             result,
@@ -40,26 +40,13 @@ export class CalculatorService {
         };
     }
     
-    async calculateLvl2({ materialBase, materialHd, bsb, hammerAttemptCost }: c.lvl2InputType): Promise<c.calculatorResult> {
-        
-        /*
-        if (hammerAttemptCost > blacksmithBlessingTo11){
-            //some other other code
-            }
-            
-        if (hammerAttemptCost > attemptsTo10){
-            //some other code
-        }
-            
-        if (hammerAttemptCost > attemptsTo9){
-            //some code
-        }*/
-                   
+    async calculateLvl2({ materialBase, materialHd, bsb }: c.lvl2InputType): Promise<c.calculatorResult> {
+         
         const gradingCosts: number = 16.7 + 21 + 20.53 + 77;
-        const attemptsTo9: number = materialBase * 79;
-        const attemptsTo10: number = materialBase * 284;
-        const blacksmithBlessingTo11: number = (bsb * 4 + materialHd) * 5;
-        const blacksmithBlessingTo12: number = (bsb * 7 + materialHd) * 5;
+        const attemptsTo9: number = (Number(materialBase) * 79);
+        const attemptsTo10: number = (Number(materialBase) * 284);
+        const blacksmithBlessingTo11: number = (Number(bsb) * 4 + Number(materialHd)) * 5;
+        const blacksmithBlessingTo12: number = (Number(bsb) * 7 + Number(materialHd)) * 5;
 
         const result = attemptsTo9 + attemptsTo10*3 + blacksmithBlessingTo11*2 + blacksmithBlessingTo12 + gradingCosts;
         const path = 'do this and then that. then do another thing. '

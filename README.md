@@ -1,8 +1,4 @@
 
-<p align="center">
-  <img src="https://github.com/renatosbz/muhCalc-project/assets/101191931/e39f9d80-fa06-48f2-a12f-6fd8f020fbcb" alt="poriporiatt">
-</p>
-
 # MuhCalc
 
 MuhCalc is a tool designed to calculate the minimum expected cost for item upgrades in the Ragnarok Online game server. This tool helps players determine the most cost-effective way to upgrade their items by using various calculations, including Markov Chains and Monte Carlo Simulations.
@@ -27,15 +23,6 @@ MuhCalc is a calculator for the minimum expected cost of item upgrades on a Ragn
 - Easy-to-use interface for inputting material values and obtaining results.
 
 
-## Usage
-
-1. Open the link: `**colocar link aqui**` in your web browser.
-2. Navigate to the calculator section.
-3. Enter the values for "Material Base" and "Material HD".
-4. Click on the "Calculate" button to see the output of the calculation.
-
-## Screenshots
-
 
 ## Contact
 
@@ -46,22 +33,20 @@ For any questions or feedback, please reach out to our team!
 - Use Case Diagram
 <br>
 
-![image](https://github.com/renatosbz/muhCalc-project/assets/101191931/d6660709-373e-479b-a670-a2d27b7bae28)
+![image](https://github.com/Breno-unicap/muh-calc-project/assets/125555713/79d949b4-6f4f-4cc3-b22d-a5450e8503ef)
+
 
 - Class Diagram
 <br>
- 
-![image](https://github.com/renatosbz/muhCalc-project/assets/101191931/a86986e5-393f-40c3-804a-823b4ec857a8)
+
+ ![image](https://github.com/Breno-unicap/muh-calc-project/assets/125555713/b5490707-b587-4776-b035-8d68e3448bcd)
+
 
 - Web application preview
 <br>
 
-![image](https://github.com/renatosbz/muhCalc-project/assets/101191931/5a86b991-693f-40ce-8b1c-df6881468f9c)
-![image](https://github.com/renatosbz/muhCalc-project/assets/101191931/3f68ab1f-24ec-4696-b5eb-906bb53f2f7a)
-![image](https://github.com/renatosbz/muhCalc-project/assets/101191931/85f8b13e-ea9b-43dd-a090-22666ca0c2ff)
+![image](https://github.com/Breno-unicap/muh-calc-project/assets/125555713/1e7ff314-18cf-4a03-a521-3dac3c2c5f6d)
+![image](https://github.com/Breno-unicap/muh-calc-project/assets/125555713/922bb04b-467f-4999-9ae2-6b718e908098)
+![image](https://github.com/Breno-unicap/muh-calc-project/assets/125555713/c1d3b0bc-53c8-47b9-b2a0-943bec51736e)
 
 
-
-
-All trademarks are properties of their respective owners.
-© Copyright 2024, MuhCalc. All rights reserved.

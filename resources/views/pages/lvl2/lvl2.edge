@@ -7,15 +7,15 @@
     <h1>LV2 Equipment Calculator</h1>
     <form method="POST" action="/lvl2-calculate/?_method=POST">
         {{ csrfField() }}
-        <label for="material-base">Base Material Cost(in millions):</label>
+        <label for="material-base">Base Material Cost (in millions):</label>
         <input type="number" id="material-base" name="materialBase" step="any" min=0 required>
         <br>
         <br>
-        <label for="material-hd">Special Material Cost(in millions):</label>
+        <label for="material-hd">Special Material Cost (in millions):</label>
         <input type="number" id="material-hd" name="materialHd" step="any" min=0 required>
         <br>
         <br>
-        <label for="bsb">BSB cost(in millions):</label>
+        <label for="bsb">BSB cost (in millions):</label>
         <input type="number" id="bsb" name="bsb" step="any" min=0 required>
         <br>
         <br>
@@ -26,7 +26,7 @@
         <button type="submit">Calculate</button>
     </form>
     <div class="output">
-        <h2>Output: {{ output ? `${output} zeny` :"--" }} </h2>
+        <h2>{{ output ? `It will cost, on average, ${output} Zeny` :"" }} </h2>
     </div>
     <div class="guide">
       <p> {{ guide ? `${guide}` :"" }} </p>

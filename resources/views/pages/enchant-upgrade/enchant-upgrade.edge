@@ -20,10 +20,10 @@
       <button type="submit">Calculate</button>
   </form>
   <div class="output">
-    <h2>Output:</h2>
+    <h2>{{ guide ? `Output:` :"" }}</h2>
 </div>
 <div class="guide">
-  <p> {{ guide ? `${guide}` :"" }} </p>
+  <p> {{ guide ? `GUIDE - ${guide}` :"" }} </p>
 </div>
 </section>
 

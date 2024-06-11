@@ -4,6 +4,8 @@ import type { Config } from '@japa/runner/types'
 import { pluginAdonisJS } from '@japa/plugin-adonisjs'
 import testUtils from '@adonisjs/core/services/test_utils'
 import { browserClient } from '@japa/browser-client'
+import { apiClient } from '@japa/api-client'
+import env from '#start/env'
 
 /**
  * This file is imported by the "bin/test.ts" entrypoint file
@@ -15,6 +17,9 @@ import { browserClient } from '@japa/browser-client'
  */
 export const plugins: Config['plugins'] = [
   assert(),
+  apiClient({
+    baseURL: `http://${env.get('HOST')}:${env.get('PORT')}`
+    }),
   browserClient({
     runInSuites: ['browser']
   }),
@@ -42,3 +47,8 @@ export const configureSuite: Config['configureSuite'] = (suite) => {
     return suite.setup(() => testUtils.httpServer().start())
   }
 }
+
+export const reporters: Config['reporters'] = {
+  activated: ['spec']
+}
+

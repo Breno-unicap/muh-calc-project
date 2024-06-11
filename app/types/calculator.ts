@@ -20,6 +20,6 @@ export interface shadowGearType {
 }
 
 export interface calculatorResult {
-    result: number;
+    result: string;
     path: string;
 }
